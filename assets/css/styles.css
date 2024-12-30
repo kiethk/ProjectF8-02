@@ -25,6 +25,17 @@ a {
     text-align: center;
 }
 
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
 /* ======================Header========================== */
 
 .header {
@@ -250,6 +261,7 @@ a {
 .hero .card .card-course {
     display: flex;
     align-content: center;
+    align-items: center;
 }
 
 .hero .icon-box {
@@ -307,8 +319,9 @@ a {
 }
 
 .course .course-img {
-    height: 278px;
-    width: 369px;
+    margin: -1px;
+    height: 280px;
+    width: 371px;
     object-fit: cover;
     object-position: center;
     border-radius: 12px 12px 0 0;
@@ -326,7 +339,7 @@ a {
 }
 
 .course-box {
-    width: 370px;
+    width: calc((370 / (vw - 135px * 2)) * 100);
     height: 466px;
     border: 1px solid #e2dfda;
     border-radius: 12px;
@@ -394,4 +407,175 @@ a {
     font-style: normal;
     font-weight: 600;
     line-height: 166.667%;
+}
+
+.course .body {
+    position: relative;
+}
+
+.course .icon-left-right {
+    position: absolute;
+    right: 0;
+    top: 42px;
+}
+
+/* ======================Reviews========================== */
+
+.reviews {
+    padding: 96px 135px;
+    height: 380px;
+    background: #2e2100;
+}
+
+.reviews-items {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reviews .avatar {
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.reviews .info-block .name {
+    margin-top: 18px;
+    color: #f7f7f7;
+    font-family: Sen;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 141.667%;
+}
+
+.reviews .info-block .desc {
+    margin-top: 4px;
+    color: #bfbcb2;
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 185.714%;
+}
+
+.reviews .info-block .order {
+    margin-top: 28px;
+}
+
+.reviews .review-block {
+    margin-left: 241px;
+}
+
+.reviews .review-block .comment {
+    margin-left: 30px;
+    width: 740px;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 153.846%; /*  */
+}
+
+.review-list {
+    display: flex;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.reviews-items {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.reviews .order {
+    display: flex;
+    gap: 6px;
+}
+
+.reviews .order .circle {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+}
+
+.reviews .order .order-active {
+    background: #ffb900;
+}
+
+/* ======================Features========================== */
+
+.features {
+    margin: 135px 0;
+    padding: 65px 135px;
+}
+
+.features .body {
+    display: flex;
+    justify-content: space-between;
+    height: 438px;
+}
+
+.features .images {
+    display: flex;
+    justify-content: space-between;
+    width: 570px;
+}
+
+.features .images img {
+    width: 270px;
+    height: 405px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.features .images .img1 {
+    align-self: flex-end;
+}
+
+.features .content {
+    width: 40.17%;
+}
+
+.features .title {
+    color: #171100;
+    font-family: Sen;
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 126.316%;
+    letter-spacing: -0.76px;
+}
+
+.features .desc {
+    margin-top: 16px;
+    color: #5f5b53;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%;
+}
+
+.features .btn {
+    margin-top: 32px;
+    background: #ffb900;
+    padding: 11px 37px;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%;
+    transition: 0.3s;
+}
+
+.features .btn:hover {
+          background: #fff;
+          color: #ffb900;
 }
