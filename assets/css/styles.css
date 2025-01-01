@@ -4,6 +4,8 @@
 
 html {
     font-size: 62.5%;
+    -webkit-scroll-behavior: smooth;
+    transition: all ease 0.3s;
 }
 
 body {
@@ -633,12 +635,15 @@ a {
     margin-top: 55px;
 }
 .blogs .blogs-list {
+    height: 499px;
     display: flex;
-    justify-content: space-between;
+    gap: 0 30px;
+    overflow: hidden;
 }
 
 .blogs .blogs-item {
-    width: 31.6%;
+    flex-shrink: 0;
+    width: calc(33.33% - 20px);
     height: 467px;
     border-radius: 16px;
     background: #fff;
